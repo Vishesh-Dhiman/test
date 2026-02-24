@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: txt-extractor
+    env: python
+    region: oregon            # change to your preferred region
+    plan: free                # or standard, according to your needs
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:                  # these will need to be configured in the Render dashboard
+      - key: API_ID
+      - key: API_HASH
+      - key: BOT_TOKEN
+      - key: OWNER_ID
+      - key: SUDO_USERS
+      - key: MONGO_URL
+      - key: CHANNEL_ID
+      - key: PREMIUM_LOGS
