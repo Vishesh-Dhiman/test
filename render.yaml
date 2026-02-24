@@ -6,12 +6,20 @@ services:
     plan: free                # or standard, according to your needs
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python main.py"
-    envVars:                  # these will need to be configured in the Render dashboard
+    envVars:                  # configure these in the Render dashboard or supply placeholders here
       - key: API_ID
+        value: ""
       - key: API_HASH
+        value: ""
       - key: BOT_TOKEN
+        value: ""
       - key: OWNER_ID
+        value: ""
       - key: SUDO_USERS
+        value: ""
       - key: MONGO_URL
+        value: ""
       - key: CHANNEL_ID
+        value: ""
       - key: PREMIUM_LOGS
+        value: ""
